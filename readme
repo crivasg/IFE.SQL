@@ -12,8 +12,9 @@ Pasos:
 En SQLite3
 7. .read ./schema.sql
 8. .read ./data.sql
-9. .import ./dataife.csv
-10. Ejecuta comandos de SQL como SELECT SUM(PAN) FROM voto;
+9. .mode csv voto
+10. .import ./dataife.csv voto
+11. Ejecuta comandos de SQL como SELECT SUM(PAN) FROM voto;
 
 
 Todavia falta mejorar muchos detalles. Mejoras son aceptadas...
