@@ -1,6 +1,9 @@
 CREATE TABLE entidad (
 	id INTEGER PRIMARY KEY,
-	nombre STRING
+	nombre STRING,
+	var STRING,
+	abr STRING,
+	abr3 STRING
 );
 
 CREATE TABLE summary (
