@@ -1,12 +1,27 @@
 BEGIN {
-	sqlBegin = "INSERT INTO summary (id,nombre,var,abr,abr3) VALUES (";
+	sqlBegin = "INSERT INTO summary (time_stamp,date_stamp,";
+	timeStr = ""
+	dateStr = ""
+	tablesStr = ""
+	valuesStr = ""
+	sqlEnd = ");\n"
 }
 {
-	if ( length($0) > 1 ) {
-		split($0,a,",");
-		printf "%s%2d,\"%s\",\"%s\",\"%s\",\"%s\");\n", sqlBegin, NR , a[1] ,a[2] ,a[3] ,a[4]
+	if ( NR == 1 ) {
+		timeStr = $1
+	} 
+	if ( NR == 2 ) {
+		dateStr = $0
+	} 	
+	if ( NR == 3 ) {
+		tablesStr = $0
 	}
+	if ( NR == 4 ) {
+		valuesStr = $0
+	}  
 }
 END {
+	printf "%s%s) VALUES (\"%s\",\"%s\",%s%s", sqlBegin,tablesStr, timeStr, dateStr,valuesStr, sqlEnd
+
 }
 
