@@ -16,5 +16,9 @@ En SQLite3
 10. .import ./dataife.csv voto
 11. Ejecuta comandos de SQL como SELECT SUM(PAN) FROM voto;
 
+Requisitos:
+- Corre en Macs, Linux y cajas Unix.
+- Necesita SQLite (www.sqlite.org), yo tengo la version version 3.6.12.
+- Herramientas como sed y awk
 
 Todavia falta mejorar muchos detalles. Mejoras son aceptadas...
