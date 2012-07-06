@@ -9,12 +9,12 @@ CREATE TABLE entidad (
 CREATE TABLE summary (
 	time_stamp STRING,
 	date_stamp STRING,
-	actas_capturadas INTEGER, 
-	actas_por_capturar INTEGER,
-	porcentaje_actas_capturadas REAL, 
-	actas_contabilizadas INTEGER, 
-	actas_no_contabilizadas INTEGER, 
-	participacion_ciudadana REAL
+	ACTAS_CAPTURADAS INTEGER, 
+	ACTAS_POR_CAPTURAR INTEGER,
+	PORCENTAJE_ACTAS_CAPTURADAS REAL, 
+	ACTAS_CONTABILIZADAS INTEGER, 
+	ACTAS_NO_CONTABILIZADAS INTEGER, 
+	PARTICIPACION_CIUDADANA REAL
 );
 
 CREATE TABLE voto (
