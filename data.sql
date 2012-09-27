@@ -31,10 +31,14 @@ INSERT INTO entidad (id, nombre) VALUES (30,"Veracruz");
 INSERT INTO entidad (id, nombre) VALUES (31,"Yucatan");
 INSERT INTO entidad (id, nombre) VALUES (32,"Zacatecas");	
 
-INSERT INTO summary (time_stamp,date_stamp,actas_capturadas,actas_por_capturar,porcentaje_actas_capturadas,actas_contabilizadas,actas_no_contabilizadas,participacion_ciudadana) VALUES ("20:00","02-07-2012",141935,143437,98.95,139962,1973,63.14);
+INSERT INTO summary
+(time_stamp,date_stamp,actas_capturadas,actas_por_capturar,porcentaje_actas_capturadas,actas_contabilizadas,actas_no_contabilizadas,participacion_ciudadana) 
+VALUES
+("20:00","02-07-2012",141935,143437,98.95,139962,1973,63.14);
 
-.mode csv voto
-.import ./dataife.csv voto
+-- comandos a ejecturar en sqlite3
+-- .mode csv voto
+--.import ./dataife.csv voto
 
 
 
