@@ -22,6 +22,9 @@ BEGIN {
 }
 END {
 	printf "%s%s) VALUES (\"%s\",\"%s\",%s%s", sqlBegin,tablesStr, timeStr, dateStr,valuesStr, sqlEnd
+	
+	printf "\n\n.mode csv voto\n"
+	printf ".import ./dataife.csv voto\n"
 
 }
 
