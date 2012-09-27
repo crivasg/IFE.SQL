@@ -8,7 +8,7 @@ BEGIN {
 }
 {
 	if ( NR == 1 ) {
-		timeStr = $1
+		timeStr = $0
 	} 
 	if ( NR == 2 ) {
 		dateStr = $0
