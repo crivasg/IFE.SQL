@@ -5,16 +5,11 @@ Pasos:
 1. Bajar el dump de la bases de datos desde prep.milenio.com
 2. tar xvzf filename.tar.gz (i.e tar xvzf 20120702_2000-listaActas.tar.gz )
 3. chmod +x log.sh
-4. ./log.sh
-5. Modificar el archivo data.sql con los datos en summary.txt.
-6. sqlite3 database.name.ext (como sugerencia, yo uso .db)
-
-En SQLite3
-7. .read ./schema.sql
-8. .read ./data.sql
-9. .mode csv voto
-10. .import ./dataife.csv voto
-11. Ejecuta comandos de SQL como SELECT SUM(PAN) FROM voto;
+4. ./log.sh database.name.ext
+5. Ejecuta comandos de SQLite. 
+```echo "SELECT * FROM view_votos_por_candidato;" | sqlite3 database.name.ext```
+o
+```sqlite3 database.name.ext``` para entrar a la consola de SQLite
 
 Requisitos:
 - Corre en Macs, Linux y cajas Unix.
